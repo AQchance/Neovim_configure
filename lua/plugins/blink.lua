@@ -4,7 +4,6 @@ return {
     opts = {
       keymap = {
         preset = "enter",
-        ["<CR>"] = { "fallback" },
         ["<Tab>"] = {
           function(cmp)
             if cmp.snippet_active() then
