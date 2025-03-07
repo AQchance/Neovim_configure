@@ -6,3 +6,13 @@ vim.api.nvim_set_keymap("n", "<leader>ap", ":CopilotChatPrompts<CR>", { noremap 
 vim.api.nvim_set_keymap("n", "<leader>am", ":CopilotChatModels<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ar", ":CopilotChatReset<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>aa", ":CopilotChatAgents<CR>", { noremap = true, silent = true })
+
+-- Example for configuring mappings in a Lua-based setup
+require("CopilotChat").setup({
+  mappings = {
+    reset = {
+      normal = "<C-x>", -- This maps 'submit_prompt' to '<Leader>s' in normal mode
+      insert = "<C-x>", -- This maps 'submit_prompt' to 'C-s' in insert mode
+    },
+  },
+})
