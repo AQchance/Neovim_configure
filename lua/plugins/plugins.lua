@@ -19,18 +19,16 @@ return {
       },
     },
   },
+
   {
-    "kdheepak/lazygit.nvim",
-    lazy = true,
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
-    },
+    "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
-      "nvim-lua/plenary.nvim",
+      { "github/copilot.vim" }, -- 需要 GitHub Copilot 支持
     },
+    config = function()
+      require("CopilotChat").setup({
+        -- 这里可以自定义配置
+      })
+    end,
   },
 }
