@@ -15,4 +15,26 @@ require("CopilotChat").setup({
       insert = "<C-x>", -- This maps 'submit_prompt' to 'C-s' in insert mode
     },
   },
+  prompts = {
+    aa = {
+      prompt = "解释代码如何工作",
+      description = "解释代码",
+    },
+    ab = {
+      prompt = "帮我修改一下代码，让代码更加高效健壮",
+      description = "重构代码",
+    },
+    ac = {
+      prompt = "为我的代码添加一些注释",
+      description = "添加注释",
+    },
+    ad = {
+      prompt = "修改我的代码中的BUG以及错误",
+      description = "纠正错误",
+    },
+    ae = {
+      prompt = "为我的代码添加一些测试用例",
+      description = "添加测试",
+    },
+  },
 })
