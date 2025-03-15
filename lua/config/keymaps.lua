@@ -7,6 +7,10 @@ vim.api.nvim_set_keymap("n", "<leader>am", ":CopilotChatModels<CR>", { noremap =
 vim.api.nvim_set_keymap("n", "<leader>ar", ":CopilotChatReset<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>aa", ":CopilotChatAgents<CR>", { noremap = true, silent = true })
 
+-- Normal模式下的行首行尾跳转
+vim.api.nvim_set_keymap("n", "<C-a>", "0", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-e>", "$", { noremap = true, silent = true })
+
 -- Example for configuring mappings in a Lua-based setup
 require("CopilotChat").setup({
   mappings = {
