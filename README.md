@@ -7,6 +7,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ```bash
 brew install neovim
+git clone https://github.com/AQchance/Neovim_configure.git ~/.config/nvim
 brew install pyright
 brew install fzf
 brew install lazygit
