@@ -3,7 +3,7 @@ require("config.lazy")
 vim.wo.number = true
 -- vim.wo.relativenumber = false
 vim.opt.clipboard = "unnamedplus"
-vim.o.guifont = "JetBrainsMono Nerd Font:h13"
+vim.o.guifont = "JetBrainsMono Nerd Font:h14"
 vim.g.neovide_transparency = 1
 vim.cmd([[colorscheme tokyonight-storm]])
 -- vim.g.neovide_window_blurred = true
