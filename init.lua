@@ -13,18 +13,18 @@ vim.cmd([[colorscheme tokyonight-storm]])
 --
 -- 这段用来调整输入法的切换
 local function toggle_input_method(mode)
-  local handle = io.popen("fcitx-remote")
+  local handle = io.popen("fcitx5-remote")
   if handle then
     local currentIM = handle:read("*l")
     handle:close()
 
     if mode == "normal" then
       -- 进入 Normal 模式时，切换到英文（1）
-      vim.fn.system("fcitx-remote -c")
+      vim.fn.system("fcitx5-remote -c")
       vim.g.previousIM = currentIM -- 记录之前的输入法状态
     elseif mode == "insert" and vim.g.previousIM == "2" then
       -- 进入 Insert 模式时，如果之前是中文（2），则恢复
-      vim.fn.system("fcitx-remote -o")
+      vim.fn.system("fcitx5-remote -o")
     end
   end
 end
