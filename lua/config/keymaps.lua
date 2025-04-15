@@ -47,3 +47,7 @@ require("CopilotChat").setup({
     "@models 总是使用中文回答问题",
   },
 })
+
+-- yazi插件需要修改一下快捷键
+vim.api.nvim_set_keymap("n", "<M-Up>", ":Yazi toggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
