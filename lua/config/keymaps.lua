@@ -43,4 +43,7 @@ require("CopilotChat").setup({
       description = "添加测试",
     },
   },
+  sticky = {
+    "@models 总是使用中文回答问题",
+  },
 })
