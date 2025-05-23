@@ -16,6 +16,18 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         clangd = {},
+        gopls = {
+          settings = {
+            gopls = {
+              usePlaceholders = true,
+              analyses = {
+                unusedparams = true,
+                nilness = true,
+                unusedwrite = true,
+              },
+            },
+          },
+        },
       },
     },
   },
