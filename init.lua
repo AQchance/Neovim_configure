@@ -4,8 +4,10 @@ vim.wo.number = true
 -- vim.wo.relativenumber = false
 vim.opt.clipboard = "unnamedplus"
 vim.o.guifont = "JetBrainsMono Nerd Font:h15"
-vim.g.neovide_transparency = 1
-vim.cmd([[colorscheme tokyonight-storm]])
+vim.g.neovide_opacity = 1
+vim.cmd.colorscheme("catppuccin")
+-- vim.cmd([[colorscheme tokyonight-storm]])
+
 -- vim.g.neovide_window_blurred = true
 -- vim.g.neovide_background_image = "/home/anqian/Pictures/bg.jpg"
 --
