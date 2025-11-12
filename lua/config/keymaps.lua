@@ -9,6 +9,7 @@ vim.api.nvim_set_keymap("n", "<leader>aa", ":CopilotChatAgents<CR>", { noremap =
 
 -- 普通模式下 C-n 映射为 C-a
 vim.keymap.set("n", "<C-n>", "<C-a>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-p>", "<C-x>", { noremap = true, silent = true })
 
 -- Normal模式下的行首行尾跳转
 vim.api.nvim_set_keymap("n", "<C-a>", "0", { noremap = true, silent = true })
