@@ -48,6 +48,7 @@ require("CopilotChat").setup({
     },
   },
   sticky = {
+    "@copilot 你可以读取工作空间的文件内容",
     "@models 总是使用中文回答问题",
   },
 })
