@@ -133,4 +133,49 @@ return {
       },
     },
   },
+  {
+    "xiyaowong/transparent.nvim",
+    config = function()
+      require("transparent").setup({
+        extra_groups = {
+          "NormalFloat", -- 浮动窗口
+          "NvimTreeNormal", -- NvimTree
+          "Normal",
+          "NormalNC",
+          "Comment",
+          "Constant",
+          "Special",
+          "Identifier",
+          "Statement",
+          "PreProc",
+          "Type",
+          "Underlined",
+          "Todo",
+          "String",
+          "Function",
+          "Conditional",
+          "Repeat",
+          "Operator",
+          "Structure",
+          "LineNr",
+          "NonText",
+          "SignColumn",
+          "CursorLine",
+          "CursorLineNr",
+          "StatusLine",
+          "StatusLineNC",
+          "EndOfBuffer",
+        },
+      })
+
+      -- 打开透明
+      vim.cmd("TransparentEnable")
+      require("transparent").clear_prefix("BufferLine")
+      require("transparent").clear_prefix("NeoTree")
+      require("transparent").clear_prefix("Lsp")
+      require("transparent").clear_prefix("fzf")
+      require("transparent").clear_prefix("lualine")
+    end,
+  },
+  -- TODO:
 }

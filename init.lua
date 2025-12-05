@@ -3,7 +3,7 @@ require("config.lazy")
 vim.wo.number = true
 -- vim.wo.relativenumber = false
 vim.opt.clipboard = "unnamedplus"
-vim.o.guifont = "JetBrainsMono Nerd Font:h19:b"
+vim.o.guifont = "JetBrainsMono Nerd Font:h13:b"
 vim.g.neovide_opacity = 1
 vim.cmd.colorscheme("catppuccin")
 -- vim.cmd([[colorscheme tokyonight-storm]])
