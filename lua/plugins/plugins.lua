@@ -172,7 +172,7 @@ return {
       vim.cmd("TransparentEnable")
       require("transparent").clear_prefix("BufferLine")
       require("transparent").clear_prefix("NeoTree")
-      require("transparent").clear_prefix("Lsp")
+      -- require("transparent").clear_prefix("Lsp")
       require("transparent").clear_prefix("fzf")
       -- require("transparent").clear_prefix("lualine")
     end,
