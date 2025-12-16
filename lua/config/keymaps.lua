@@ -58,7 +58,7 @@ vim.api.nvim_set_keymap("n", "<M-Up>", ":Yazi toggle<CR>", { noremap = true, sil
 vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
 
 
-vim.api.nvim_set_keymap("n", "<leader>ch", ":Ouroboros<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gh", ":Ouroboros<CR>", { noremap = true, silent = true })
 require('ouroboros').setup({
     extension_preferences_table = {
           -- Higher numbers are a heavier weight and thus preferred.
