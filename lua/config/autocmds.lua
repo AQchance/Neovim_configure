@@ -21,3 +21,16 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+
+-- lua/config/autocmds.lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function(args)
+    if vim.api.nvim_buf_get_name(args.buf):match("xmake%.lua$") then
+      vim.defer_fn(function()
+        vim.cmd("LspStop")
+      end, 200)
+    end
+  end,
+})
