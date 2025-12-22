@@ -22,7 +22,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-
 -- lua/config/autocmds.lua
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "lua",
@@ -32,5 +31,13 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.cmd("LspStop")
       end, 200)
     end
+  end,
+})
+
+-- 当打开 xmake.lua 文件时，禁用自动格式化
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "xmake.lua",
+  callback = function()
+    vim.b.autoformat = false
   end,
 })
