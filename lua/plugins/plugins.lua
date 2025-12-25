@@ -169,10 +169,11 @@ return {
       -- })
 
       -- 打开透明
-      -- vim.cmd("TransparentEnable")
-      -- require("transparent").clear_prefix("BufferLine")
-      -- require("transparent").clear_prefix("NeoTree")
-      -- -- require("transparent").clear_prefix("Lsp")
+      vim.cmd("TransparentEnable")
+      require("transparent").clear_prefix("BufferLine")
+      require("transparent").clear_prefix("NeoTree")
+      require("transparent").clear_prefix("sidekick")
+      -- require("transparent").clear_prefix("Lsp")
       -- require("transparent").clear_prefix("fzf")
       -- -- require("transparent").clear_prefix("lualine")
     end,
@@ -285,13 +286,13 @@ return {
         desc = "Sidekick Select Prompt",
       },
       -- Example of a keybinding to open Claude directly
-      {
-        "<leader>ac",
-        function()
-          require("sidekick.cli").toggle({ name = "claude", focus = true })
-        end,
-        desc = "Sidekick Toggle Claude",
-      },
+      -- {
+      --   "<leader>ac",
+      --   function()
+      --     require("sidekick.cli").toggle({ name = "claude", focus = true })
+      --   end,
+      --   desc = "Sidekick Toggle Claude",
+      -- },
     },
   },
 }
