@@ -13,10 +13,10 @@ vim.keymap.set("n", "<C-n>", "<C-a>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-p>", "<C-x>", { noremap = true, silent = true })
 
 -- Normal模式下的行首行尾跳转
-vim.api.nvim_set_keymap("n", "<C-a>", "0", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-e>", "$", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-a>", "0", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-e>", "$", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-a>", "0", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-e>", "$", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<C-a>", "0", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<C-e>", "$", { noremap = true, silent = true })
 
 -- Example for configuring mappings in a Lua-based setup
 require("CopilotChat").setup({
