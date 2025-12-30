@@ -31,17 +31,65 @@ return {
       },
     },
   },
-
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "github/copilot.vim" }, -- 需要 GitHub Copilot 支持
-    },
+    "p00f/clangd_extensions.nvim",
+    dependencies = { "neovim/nvim-lspconfig" },
     config = function()
-      require("CopilotChat").setup({
-        -- 这里可以自定义配置
+      require("clangd_extensions").setup({
+        ast = {
+          -- These are unicode, should be available in any font
+          role_icons = {
+            type = "🄣",
+            declaration = "🄓",
+            expression = "🄔",
+            statement = ";",
+            specifier = "🄢",
+            ["template argument"] = "🆃",
+          },
+          kind_icons = {
+            Compound = "🄲",
+            Recovery = "🅁",
+            TranslationUnit = "🅄",
+            PackExpansion = "🄿",
+            TemplateTypeParm = "🅃",
+            TemplateTemplateParm = "🅃",
+            TemplateParamObject = "🅃",
+          },
+          --[[ These require codicons (https://github.com/microsoft/vscode-codicons)
+            role_icons = {
+                type = "",
+                declaration = "",
+                expression = "",
+                specifier = "",
+                statement = "",
+                ["template argument"] = "",
+            },
+
+            kind_icons = {
+                Compound = "",
+                Recovery = "",
+                TranslationUnit = "",
+                PackExpansion = "",
+                TemplateTypeParm = "",
+                TemplateTemplateParm = "",
+                TemplateParamObject = "",
+            }, ]]
+
+          highlights = {
+            detail = "Comment",
+          },
+        },
+        memory_usage = {
+          border = "none",
+        },
+        symbol_info = {
+          border = "none",
+        },
       })
     end,
+  },
+  {
+    "github/copilot.vim",
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
@@ -194,10 +242,6 @@ return {
         },
       },
     },
-  },
-  {
-    "jakemason/ouroboros",
-    requires = { { "nvim-lua/plenary.nvim" } },
   },
   -- Sidekick.nvim configuration
   {
