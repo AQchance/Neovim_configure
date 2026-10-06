@@ -5,7 +5,8 @@ vim.wo.number = true
 vim.opt.clipboard = "unnamedplus"
 vim.o.guifont = "JetBrainsMono Nerd Font:h13:b"
 vim.g.neovide_opacity = 1
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("tokyonight")
+-- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd([[colorscheme tokyonight-storm]])
 
 -- vim.g.neovide_window_blurred = true
@@ -44,3 +45,9 @@ vim.api.nvim_create_autocmd("InsertEnter", {
     toggle_input_method("insert")
   end,
 })
+
+-- require("sidekick").setup({
+--   -- 这里的宽度可以根据你的喜好调整
+--   width = 90,
+--   -- 有些版本可能使用 win_config 包装
+-- })
